@@ -16,16 +16,26 @@ public class AuthenticationController {
 
   @PostMapping("/register")
   public ResponseEntity<AuthenticationResponse> register(
-      @RequestBody RegisterRequest request
-  ) {
+      @RequestBody RegisterRequest request) {
     return ResponseEntity.ok(service.register(request));
   }
+
   @PostMapping("/authenticate")
   public ResponseEntity<AuthenticationResponse> authenticate(
-      @RequestBody AuthenticationRequest request
-  ) {
+      @RequestBody AuthenticationRequest request) {
     return ResponseEntity.ok(service.authenticate(request));
   }
 
-
 }
+
+// {
+// "organizationName":"Spectrum Enginnering Limited",
+// "organizationShortName":"SSEL",
+// "organizationAddress":"Su",
+// "organizationUrl":"http://baby.com",
+// "organizationDataJson":"{what the fuck}",
+// "organizationStatus":"Active",
+// "organizationLogoFileFath":"babu.com",
+// "createdBy":"Mahmudul Hasan",
+// "updatedBy":""
+// }
